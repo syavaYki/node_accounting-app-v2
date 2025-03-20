@@ -15,7 +15,7 @@ const getOne = (req, res) => {
   const user = getUserById(id);
 
   if (!user) {
-    res.sendStatus(404).send({ error: 'Todo not found' });
+    res.status(404).send({ error: 'User not found' });
 
     return;
   }
@@ -66,7 +66,7 @@ const deleteOne = (req, res) => {
   const user = getUserById(id);
 
   if (!user) {
-    res.sendStatus(404).send({ error: 'Todo not found' });
+    res.sendStatus(404).send({ error: 'User not found' });
 
     return;
   }

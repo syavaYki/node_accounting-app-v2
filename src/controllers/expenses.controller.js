@@ -18,7 +18,7 @@ const getOne = (req, res) => {
   const expense = getExpensesById(id);
 
   if (!expense) {
-    res.sendStatus(404).send({ error: 'Todo not found' });
+    res.status(404).send({ error: 'Expense not found' });
 
     return;
   }
@@ -70,7 +70,7 @@ const deleteOne = (req, res) => {
   const expense = getExpensesById(id);
 
   if (!expense) {
-    res.sendStatus(404).send({ error: 'Todo not found' });
+    res.sendStatus(404).send({ error: 'Expense not found' });
 
     return;
   }
